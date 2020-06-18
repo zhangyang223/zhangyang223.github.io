@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <title>Yang Yang Bot</title>
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -8,7 +9,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-h1,h2,h3,h4,h5,h6 {font-family: "Oswald"}
+h1,h2,h3,h4,h5,h6,p {font-family: "Oswald"}
 body {font-family: "Open Sans"}
 .btn.rounded {
     border-radius: 50px;
@@ -36,7 +37,44 @@ body {font-family: "Open Sans"}
   padding-right: 20px;
 }
 
+#featurelist {
+  font-size: 36px;
+}
+
+  @media screen and (max-width: 481px)
+  {
+
+    #featurelist {
+      font-size: 15px;
+    }
+
+    .btn.huge {
+        padding: 18px 35px;
+        font-weight: 1500;
+        font-size: 18px;
+        min-width: 50px;
+    }
+    .display-right {
+        position: absolute;
+        top: 50%;
+        right: 0%;
+        transform: translate(0%,-50%);
+        -ms-transform: translate(0%,-50%);
+    }
+    .flex-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: space-around;
+    }
+    .div-padding-right{
+      padding-right: 2px;
+    }  
+  }
 </style>
+
+  
+</head>
 <body class="w3-light-grey">
 
 <!-- w3-content defines a container for fixed size centered content, 
@@ -49,43 +87,41 @@ and is wrapped around the whole page content, except for the footer in this exam
       <div class="div-padding-right" ><img src="music-154368_640.png" alt="Yang Yang Bot"  width="64"></div> 
       <h1 class="w3-xxxlarge"><b>Yang Yang Bot</b></h1>
     </div>
-    <h5>Fully Featured and Easy to Use Discord Music Bot</h6>
+    <h1 class="w3-medium">Fully Featured and Easy to Use Discord Music Bot</h6>
+    <h1><button class="w3-button w3-black w3-padding-large w3-opacity w3-hover-opacity-off btn rounded huge" onclick="window.location.href='https://discord.com/oauth2/authorize?client_id=713550367165644810&scope=bot';">Add to Discord</button></h1>
   </header>
 
   <!-- Image header -->
   <header class="w3-display-container w3-wide" id="home">
     <img class="w3-image" src="people-2572958_1920.jpg" alt="Yang Yang Bot" width="1600" height="1060">
-    <div class="w3-display-left w3-padding-large">
-      <h1><button class="w3-button w3-black w3-padding-large w3-opacity w3-hover-opacity-off btn rounded huge" onclick="window.location.href='https://discord.com/oauth2/authorize?client_id=713550367165644810&scope=bot';">Add to Discord</button></h1>
-    </div>
     <div class="display-right w3-padding-large">
-        <h1 class="w3-text-white"><b>Play Songs</b></h1>
-        <h1 class="w3-text-white"><b>Search Songs</b></h1>
-        <h1 class="w3-text-white"><b>Lyrics in</b></h1>
-        <h1 class="w3-text-white"><b>中文</b></h1>
-        <h1 class="w3-text-white"><b>韓文</b></h1>
-        <h1 class="w3-text-white"><b>日文</b></h1>
+        <h1 class="w3-text-white" id="featurelist"><b>Play Songs</b></h1>
+        <h1 class="w3-text-white" id="featurelist"><b>Search Songs</b></h1>
+        <h1 class="w3-text-white" id="featurelist"><b>Lyrics in</b></h1>
+        <h1 class="w3-text-white" id="featurelist"><b>中文</b></h1>
+        <h1 class="w3-text-white" id="featurelist"><b>韓文</b></h1>
+        <h1 class="w3-text-white" id="featurelist"><b>日文</b></h1>
     </div>
 
   </header>
+<!--
+  <div class="flex-container">
+    <p>Command Prefix: </p>
+    <span class="w3-black"><code>;</code></span>
+  </div>
+-->
+<header class="w3-container w3-center w3-white">
+  <div class="w3-container w3-white w3-margin w3-padding-large">
+      <h5  id="featurelist">Support all typical features, such as skip, move, remove</h5>
+      <hr/>
+      <h5  id="featurelist">Very easy to use</h5>
+      <hr/>
+      <h5  id="featurelist">New mini games coming in the near future</h5>
+      <hr/>
+      <h5  id="featurelist">Click on 'Add to Discord' to try it out</h5>
+  </div>
+</header>
 
-<script>
-// Toggle between hiding and showing blog replies/comments
-document.getElementById("myBtn").click();
-function myFunction(id) {
-  var x = document.getElementById(id);
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else { 
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
-
-function likeFunction(x) {
-  x.style.fontWeight = "bold";
-  x.innerHTML = "✓ Liked";
-}
-</script>
 
 </body>
 </html>
